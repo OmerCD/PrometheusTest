@@ -1,0 +1,51 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  prometheustestpeopleapi:
+    image: prometheustestpeopleapi
+    build:
+      context: .
+      dockerfile: PrometheusTest.People.API/Dockerfile
+    ports:
+      - 5001:5001
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://*:5001
+    networks: 
+      - dotnetgrafana
+  prometheustestlocationapi:
+    image: prometheustestlocationapi
+    build:
+      context: .
+      dockerfile: PrometheusTest.Location.API/Dockerfile
+    ports:
+      - 5002:5002
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://*:5002
+    networks: 
+        - dotnetgrafana
+  prometheus:
+    image: prom/prometheus
+    restart: always
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    networks:
+      - dotnetgrafana
+
+  grafana: 
+    image: grafana/grafana
+    #command:
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=P@ssw0rd
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - dotnetgrafana
+networks: 
+  dotnetgrafana:

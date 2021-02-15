@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrometheusTest.People.API", "PrometheusTest.People.API\PrometheusTest.People.API.csproj", "{8AD9C4C5-18C1-4E60-B184-5A293F292AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrometheusTest.Location.API", "PrometheusTest.Location.API\PrometheusTest.Location.API.csproj", "{E508B4EC-1583-425F-8289-CC93539A81FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AD9C4C5-18C1-4E60-B184-5A293F292AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD9C4C5-18C1-4E60-B184-5A293F292AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD9C4C5-18C1-4E60-B184-5A293F292AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD9C4C5-18C1-4E60-B184-5A293F292AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E508B4EC-1583-425F-8289-CC93539A81FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E508B4EC-1583-425F-8289-CC93539A81FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E508B4EC-1583-425F-8289-CC93539A81FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E508B4EC-1583-425F-8289-CC93539A81FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
